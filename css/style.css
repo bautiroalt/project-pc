@@ -1,0 +1,260 @@
+
+body{
+    background-color: #faedcd;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+/*  navbar  */
+
+.navbar.navbar-expand-lg.mi-navbar {
+    color: #6b705c;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: xx-large;
+    background-color: #ccd5ae;
+}
+
+a.nav-link.mi-link {
+    position: relative;
+    text-decoration: none;
+    color: #6b705c;
+    font-size: 1rem;
+    letter-spacing: .5;
+    padding: 0 1rem;
+
+}
+
+a.nav-link.mi-link::after {
+    content: "";
+    position: absolute;
+    background-color: #6b705c;
+    width: 0;
+    height: .2rem;
+    left: 0;
+    bottom: .05rem;
+    transition: .3s;
+}
+
+a.nav-link.mi-link:hover::after {
+    width: 100%;
+}
+
+/*  button  */
+
+.btn.btn-primary.mi-button {
+    background-color: #ccd5ae;
+    border: solid transparent;
+    border-radius: .5rem;
+}
+
+.btn.btn-primary.mi-button:hover {
+    background-color: #c9cba3;
+}
+
+/*  accordion   */
+
+button.accordion-button {
+    background-color: #ccd5ae;
+}
+
+.accordion-button:not(.collapsed).mi-accordion {
+    color: black;
+    background-color: #ccd5ae;
+    box-shadow: none;
+}
+
+.accordion-button:focus.mi-accordion {
+    border: none;
+    z-index: none;
+    box-shadow: none;
+}
+
+/*  card    */
+
+div.card {
+    background-color: #fefae0;
+    border: solid .2rem #ccd5ae;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mi-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.mi-card-body .card-text {
+    flex: 1;
+}
+
+img.card-img {
+    height: auto;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/*  card mobile */
+
+
+
+/*  footer */
+
+footer>div {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.f-links {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.f-links a {
+    color: #6b705c;
+    display: block;
+}
+
+.f-links i {
+    font-size: x-large;
+    margin: .5rem;
+}
+
+.f-links i:hover {
+    font-size: xx-large;
+    transition: .2S;
+}
+
+.links {
+    list-style: none;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.links a {
+    text-decoration: none;
+    color: #6b705c;
+    font-size: x-large;
+}
+
+.links a:hover {
+    font-size: xx-large;
+    transition: .2S;
+}
+
+/*  contacto    */
+
+#footer-contacto, #contacto-mobile {
+    display: none;
+}
+
+.contacto-l {
+    text-decoration: none;
+    list-style: none;
+}
+
+.contacto-l a {
+    text-decoration: underline;
+    color: black;
+}
+
+.contacto-l li {
+    gap: 1rem;
+    font-size: x-large;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contacto h1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacto-f input, textarea {
+    border: solid transparent;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #ccd5ae;
+} 
+
+.contacto-f textarea {
+    resize: none;
+}
+
+[type="submit"]:focus-visible {
+    border: solid 2px black;
+}
+
+/*  media   */
+
+@media only screen and (min-width: 992px) {
+    .navbar-nav.mx-auto.mb-2.mb-lg-0.nav-center {
+        gap: 5rem;
+    }
+
+    img.card-mobile {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar.navbar-expand-lg.mi-navbar {
+        color: #6b705c;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        font-size: xx-large;
+        background-color: #ccd5ae;
+    }
+
+    #footer-contacto, #contacto-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contacto-pc {
+        display: none;
+    }
+
+    a.bt-pc {
+        display: none;
+    }
+
+    img.card-pc {
+        display: none;
+    }
+
+    .contacto-l li {
+        font-size: large;
+    }
+
+    .links a {
+        font-size: large;
+    }
+}
